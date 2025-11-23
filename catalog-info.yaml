@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mcp-tool-sscs-context-svc-gitops
+  description: This is GitOps manifest for mcp-tool-sscs-context-svc   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=mcp-tool-sscs-context-svc
+    backstage.io/kubernetes-id: mcp-tool-sscs-context-svc 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: mcp-tool-sscs-context-svc
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:mcp-tool-sscs-context-svc

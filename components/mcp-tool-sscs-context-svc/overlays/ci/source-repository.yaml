@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: mcp-tool-sscs-context-svc-repository
+spec:
+  url: https://github.com/org4rong/mcp-tool-sscs-context-src
