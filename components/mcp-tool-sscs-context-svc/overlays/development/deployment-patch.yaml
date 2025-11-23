@@ -6,11 +6,14 @@ metadata:
     tad.gitops.get/image: ".spec.template.spec.containers[0].image"
     tad.gitops.set/replicas: ".spec.replicas"
     tad.gitops.get/replicas: ".spec.replicas"
+    sscs-repo-permalink: https://github.com/org4rong/mcp-tool-sscs-context-src/commit/b7d71ea7ca36f21355a3e39a3103ee067702da74
+    sscs-image-risk: 6
+    sscs-image-scanner: ./roxctl image scan --insecure-skip-tls-verify -e central-stackrox.apps.rhocp1.hcp.res.ibm.com:443 --image quay.io/org4rong/mcp-tool-sscs-context-img:b7d71ea7ca36f21355a3e39a3103ee067702da74@sha256:db2a3759c49e60cc16a2da744d157bc5cbfbb3890e143981855d2f083da2e235 --output json --force
   name: mcp-tool-sscs-context-svc
 spec:
   replicas: 1
   template:
     spec:
       containers:
-        - image: quay.io/org4rong/mcp-tool-sscs-context-img:68eb55273ec68bd44d8a5a2af98da86300c1840d@sha256:6dafa9fa7691191091b1859ec6f16b92daa81c56725a500db036ba922fe41ca7
+        - image: quay.io/org4rong/mcp-tool-sscs-context-img:b7d71ea7ca36f21355a3e39a3103ee067702da74@sha256:db2a3759c49e60cc16a2da744d157bc5cbfbb3890e143981855d2f083da2e235
           name: container-image
