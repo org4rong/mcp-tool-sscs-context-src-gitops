@@ -15,5 +15,5 @@ spec:
   template:
     spec:
       containers:
-        - image: quay.io/org4rong/mcp-tool-sscs-context-img:b7d71ea7ca36f21355a3e39a3103ee067702da74@sha256:db2a3759c49e60cc16a2da744d157bc5cbfbb3890e143981855d2f083da2e235
+        - image: quay.io/rh-ee-caxu/sscs-mcp-server@sha256:731466873dc9fff17687eff85eb51ff05018c1ee5874434d28fea564b180dd8d
           name: container-image

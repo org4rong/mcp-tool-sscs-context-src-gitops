@@ -8,7 +8,7 @@ metadata:
   name: mcp-tool-sscs-context-svc
 spec:
   ports:
-  - port: 8081 
-    targetPort: 8081 
+  - port: 8000
+    targetPort: 8000
   selector:
     app.kubernetes.io/instance: mcp-tool-sscs-context-svc 
